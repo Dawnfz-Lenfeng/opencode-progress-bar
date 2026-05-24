@@ -20,7 +20,7 @@ function makeBar(percent: number, width: number): string {
 }
 
 function barColor(percent: number): string {
-  if (percent < 75) return "white"
+  if (percent < 60) return "white"
   if (percent < 90) return "yellow"
   return "red"
 }

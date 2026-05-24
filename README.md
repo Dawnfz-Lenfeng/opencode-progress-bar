@@ -5,7 +5,7 @@ A [opencode](https://opencode.ai) TUI plugin that displays a context usage progr
 ## Preview
 
 ```
-█░░░░░░░░░   (white — <75%)
+█░░░░░░░░░   (white — <60%)
 ████████░░   (yellow — <90%)
 █████████░   (red — ≥90%)
 ```
@@ -15,7 +15,7 @@ A [opencode](https://opencode.ai) TUI plugin that displays a context usage progr
 - Hooks into the `session_prompt_right` TUI slot, rendering a 10-character `█░` bar next to the input prompt
 - Calculates context usage from the last completed assistant message's tokens: `input + cache.read + cache.write`
 - Compares against the model's context window limit from provider config
-- Color changes based on usage: **white** (<75%), **yellow** (<90%), **red** (≥90%)
+- Color changes based on usage: **white** (<60%), **yellow** (<90%), **red** (≥90%)
 - Updates via `message.updated` and `session.next.step.ended` events — no polling
 
 ## Install
