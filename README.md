@@ -20,13 +20,17 @@ A [opencode](https://opencode.ai) TUI plugin that displays a context usage progr
 
 ## Install
 
-### Option 1: Local file (recommended)
-
-Copy `src/index.tsx` into your opencode plugins directory and add it to `tui.json`:
+### Option 1: One-liner (recommended)
 
 ```bash
-mkdir -p ~/.config/opencode/plugins
-cp src/index.tsx ~/.config/opencode/plugins/progress-bar.tsx
+curl -fsSL https://raw.githubusercontent.com/Dawnfz-Lenfeng/opencode-progress-bar/main/install.sh | bash
+```
+
+### Option 2: Manual curl
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Dawnfz-Lenfeng/opencode-progress-bar/main/src/index.tsx \
+  -o ~/.config/opencode/plugins/progress-bar.tsx
 ```
 
 Then edit `~/.config/opencode/tui.json`:
@@ -37,10 +41,11 @@ Then edit `~/.config/opencode/tui.json`:
 }
 ```
 
-### Option 2: Symlink
+### Option 3: Clone
 
 ```bash
-ln -s /path/to/opencode-progress-bar/src/index.tsx ~/.config/opencode/plugins/progress-bar.tsx
+git clone https://github.com/Dawnfz-Lenfeng/opencode-progress-bar.git
+ln -s "$(pwd)/opencode-progress-bar/src/index.tsx" ~/.config/opencode/plugins/progress-bar.tsx
 ```
 
 ## Notes
